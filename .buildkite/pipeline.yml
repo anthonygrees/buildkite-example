@@ -4,3 +4,17 @@ steps:
     artifact_paths: "artifacts/*"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+  - label: ":hammer: Build"
+    command: "iac.sh"
+    key: build
+
+  - label: ":test_tube: Test"
+    command: "script.sh"
+    key: test
+    depends_on: build
+
+  - label: ":rocket: Deploy"
+    command: "script.sh"
+    key: deploy
+    depends_on: test
+
