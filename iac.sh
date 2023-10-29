@@ -2,6 +2,9 @@ set -eo pipefail
 
 echo "--- :package: IAC Scan"
 
+echo "--- :package: Command: pwd"
+whoami
+echo "--- :package: Command: pwd"
 pwd
 echo "--- :package: Command: ls -la"
 ls -la
