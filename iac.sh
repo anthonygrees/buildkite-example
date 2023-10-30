@@ -12,5 +12,5 @@ echo "--- :package: Command: lacework policy list --profile reesy1"
 lacework policy list --profile reesy1
 echo "--- :package: Command: lacework sca scan --save-results --profile reesy1 ."
 lacework sca scan --save-results --profile reesy1 .
-echo "--- :package: Command: lacework sca scan --save-results --profile reesy1 ."
+echo "--- :package: Command: lacework iac scan --profile reesy1"
 lacework iac scan --profile reesy1
